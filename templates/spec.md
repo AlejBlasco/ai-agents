@@ -1,0 +1,30 @@
+```
+SPEC_ID: S-XXX
+
+FEATURE:
+...
+
+OBJETIVO:
+...
+
+CONTEXTO_TECNICO:
+- ...
+
+ALCANCE:
+- ...
+
+FUERA_DE_ALCANCE:
+- ...
+
+REGLAS_NEGOCIO:
+- ...
+
+CRITERIOS_ACEPTACION:
+- ...
+
+INVARIANTES:
+- ...
+
+DUDAS:
+- ...
+```
