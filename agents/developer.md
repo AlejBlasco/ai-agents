@@ -4,7 +4,7 @@ description: "Executes TASKS by generating code and tests within strict scope"
 model: sonnet
 tools: Read, Grep, Glob, Write, Edit, Bash
 color: emerald
-memory: none
+memory: project
 skills: clean-architecture, cqrs-execution, xunit-testing, dependency-injection-design
 ---
 
