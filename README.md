@@ -5,7 +5,6 @@
 
 ## Features
 
-- 🧠 **Modular N-Layer Architecture**: Clean separation of domain, application, infrastructure, and UI layers for maintainability and testability.
 - ⚡ **Plug & Play Agents**: Easily add, configure, and extend agents for a variety of AI tasks.
 - 🛠️ **Ready-to-Use Templates**: Kickstart your projects with best-practice templates for specs, technical docs, and functional documentation.
 - 🧪 **Comprehensive Testing**: Built-in test structure to ensure reliability and quality.
@@ -25,6 +24,7 @@
 	```
 3. **Explore the structure**
 	- `docs/` — Documentation
+	- `docs/CONTRIBUTING.md` — Contribution guidelines
 	- `context/` — Conventions, stack, and solution guides
 	- `agents/` — Agent definitions
 	- `prompts/` — Prompt engineering assets
@@ -32,11 +32,11 @@
 
 ## Contributing
 
-We welcome contributions! Please open issues, submit pull requests, or suggest features. See the [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+We welcome contributions! Please open issues, submit pull requests, or suggest features. See the [CONTRIBUTING.md](docs/CONTRIBUTING.md) for guidelines.
 
 ## License
 
-This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
+This project is licensed under the MIT License. See [LICENSE](./LICENSE) for details.
 
 ---
 

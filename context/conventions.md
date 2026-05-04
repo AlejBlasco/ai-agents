@@ -67,6 +67,6 @@ This document defines the coding and organizational conventions for multi-agent,
 - The **Command Handler** or **Query Handler** and its corresponding **Validator** (if any) **must be defined in the same `.cs` file**.
 - This improves maintainability and discoverability of related logic.
 - Example:  
-  - `CreatePurchaseCommand.cs` should contain both the handler (`CreatePurchaseCommandHandler`) and the validator (`CreatePurchaseCommandValidator`).
+  - `CreatePurchase.cs` should contain both the handler (`CreatePurchaseCommandHandler`) and the validator (`CreatePurchaseCommandValidator`).
 
 ---

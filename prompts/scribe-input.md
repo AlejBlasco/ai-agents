@@ -1,7 +1,15 @@
-Use:
+@scribe
 
-- [GENERATED SPEC]
-- `context\stack.md`
-- `context\conventions.md`
+Usa:
+- `.claude/context/stack.md`
+- `.claude/context/solution.md`
 
-Write both documentations.
+SPEC:
+- Read content from `.claude/outputs/specs/S-{spec number}.md`
+
+TASKS:
+- Read content from `.claude/outputs/TASKS/TASKS-S-{spec number}.md`
+
+TARGET:
+- `docs\S-{spec number}_functional_doc.md`
+- `docs\S-{spec number}_technical_doc.md`

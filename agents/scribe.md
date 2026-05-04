@@ -47,17 +47,16 @@ If not existing, create the `/doc` folder and ensure all generated documentation
 
 For each functionality or module, create **two files** with the following format:
 
-- `{number}_{name}_funcional.md`
-- `{number}_{name}_tecnica.md`
+- `docs\S-{spec number}_functional_doc.md`
+- `docs\S-{spec number}_technical_doc.md`
 
 **Rules for naming:**
-- Use a **correlative number** starting from `01` (01, 02, 03…).
 - Use lowercase letters.
 - Replace spaces with underscores (`_`).
 - Use clear, descriptive names (e.g., `user_authentication`, `payment_processing`, `dashboard_overview`).
 - Example:
-  - `01_user_authentication_funcional.md`
-  - `01_user_authentication_tecnica.md`
+  - `S-001_user_authentication_funcional.md`
+  - `S-001_user_authentication_tecnica.md`
 
 ---
 

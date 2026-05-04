@@ -19,4 +19,12 @@ test/
     {Project Name}.Domain.UnitTests/
     {Project Name}.Shared.UnitTests/
     {Project Name}.Web.AcceptanceTests/
+.claude/
+    context/
+    prompts/
+    templates/
+    outputs/
+        specs/
+        tasks/
+        docs/
 ```
