@@ -26,5 +26,4 @@ test/
     outputs/
         specs/
         tasks/
-        docs/
 ```

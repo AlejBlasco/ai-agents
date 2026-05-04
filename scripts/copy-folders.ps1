@@ -3,7 +3,7 @@ param(
     [string]$PROJECT_PATH = $(Read-Host 'Enter the project path: ')
 )
 
-function New-Symlink {
+function Copy-Folder {
     param(
         [string]$Source,
         [string]$Target,
@@ -12,26 +12,26 @@ function New-Symlink {
     if (Test-Path $Target) {
         if ($OverwriteAll.Value) {
             Remove-Item -Path $Target -Recurse -Force
-            New-Item -ItemType SymbolicLink -Path $Target -Target $Source -Force | Out-Null
-            Write-Host "Symlink overwritten: $Target -> $Source" -ForegroundColor Green
+            Copy-Item -Path $Source -Destination $Target -Recurse -Force
+            Write-Host "Folder copied (overwritten): $Target <- $Source" -ForegroundColor Green
         } else {
             $answer = Read-Host "Target $Target already exists. Overwrite? (y/n/a = yes to all)"
             if ($answer -eq 'a' -or $answer -eq 'A') {
                 $OverwriteAll.Value = $true
                 Remove-Item -Path $Target -Recurse -Force
-                New-Item -ItemType SymbolicLink -Path $Target -Target $Source -Force | Out-Null
-                Write-Host "Symlink overwritten: $Target -> $Source" -ForegroundColor Green
+                Copy-Item -Path $Source -Destination $Target -Recurse -Force
+                Write-Host "Folder copied (overwritten): $Target <- $Source" -ForegroundColor Green
             } elseif ($answer -eq 'y' -or $answer -eq 'Y') {
                 Remove-Item -Path $Target -Recurse -Force
-                New-Item -ItemType SymbolicLink -Path $Target -Target $Source -Force | Out-Null
-                Write-Host "Symlink overwritten: $Target -> $Source" -ForegroundColor Green
+                Copy-Item -Path $Source -Destination $Target -Recurse -Force
+                Write-Host "Folder copied (overwritten): $Target <- $Source" -ForegroundColor Green
             } else {
                 Write-Host "Skipped: $Target was not overwritten." -ForegroundColor Yellow
             }
         }
     } else {
-        New-Item -ItemType SymbolicLink -Path $Target -Target $Source -Force | Out-Null
-        Write-Host "Symlink created: $Target -> $Source" -ForegroundColor Green
+        Copy-Item -Path $Source -Destination $Target -Recurse -Force
+        Write-Host "Folder copied: $Target <- $Source" -ForegroundColor Green
     }
 }
 
@@ -43,21 +43,21 @@ $OverwriteAll = $false
 # 1. agents -> C:\Users\{USUARIO}\.claude\agents
 $srcAgents = Join-Path $scriptDir '..\agents'
 $dstAgents = "C:\Users\$USUARIO\.claude\agents"
-New-Symlink -Source $srcAgents -Target $dstAgents -OverwriteAll ([ref]$OverwriteAll)
+Copy-Folder -Source $srcAgents -Target $dstAgents -OverwriteAll ([ref]$OverwriteAll)
 
 # 2. context -> {PROJECT_PATH}\.claude\context
 $srcContext = Join-Path $scriptDir '..\context'
 $dstContext = Join-Path $PROJECT_PATH '.claude\context'
-New-Symlink -Source $srcContext -Target $dstContext -OverwriteAll ([ref]$OverwriteAll)
+Copy-Folder -Source $srcContext -Target $dstContext -OverwriteAll ([ref]$OverwriteAll)
 
 # 3. prompts -> {PROJECT_PATH}\.claude\prompts
 $srcPrompts = Join-Path $scriptDir '..\prompts'
 $dstPrompts = Join-Path $PROJECT_PATH '.claude\prompts'
-New-Symlink -Source $srcPrompts -Target $dstPrompts -OverwriteAll ([ref]$OverwriteAll)
+Copy-Folder -Source $srcPrompts -Target $dstPrompts -OverwriteAll ([ref]$OverwriteAll)
 
 # 4. templates -> {PROJECT_PATH}\.claude\templates
 $srcTemplates = Join-Path $scriptDir '..\templates'
 $dstTemplates = Join-Path $PROJECT_PATH '.claude\templates'
-New-Symlink -Source $srcTemplates -Target $dstTemplates -OverwriteAll ([ref]$OverwriteAll)
+Copy-Folder -Source $srcTemplates -Target $dstTemplates -OverwriteAll ([ref]$OverwriteAll)
 
-Write-Host "\nAll symbolic links have been processed." -ForegroundColor Cyan
+Write-Host "\nAll folders have been processed (copied)." -ForegroundColor Cyan

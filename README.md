@@ -19,9 +19,20 @@
 	cd ai-agents
 	```
 2. **Bootstrap the workspace**
-	```sh
-	pwsh scripts/bootstrap.ps1
-	```
+
+	 You can set up the environment in two ways, depending on whether you want to work with symbolic links (changes in the files are reflected in the original) or with independent copies (changes do not affect the original):
+
+	 - **With symbolic links:**
+		 ```sh
+		 pwsh scripts/link-folders.ps1
+		 ```
+		 > Useful for development, as changes to the linked files will affect the original sources.
+
+	 - **With independent copies:**
+		 ```sh
+		 pwsh scripts/copy-folders.ps1
+		 ```
+		 > Useful if you want to modify files without affecting the originals.
 3. **Explore the structure**
 	- `docs/` — Documentation
 	- `docs/CONTRIBUTING.md` — Contribution guidelines

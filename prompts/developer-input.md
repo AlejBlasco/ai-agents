@@ -7,6 +7,8 @@ Use:
 - `.claude/context/conventions.md`
 - `.claude/context/solution.md`
 
-TASK:
-- Read content from `.claude/outputs/TASKS/TASKS-S-{spec number}.md`
+READ:
+- `.claude/outputs/tasks/S-{spec number}-tasks.md`
+
+TASK
 - [Paste your OWN TASKS]

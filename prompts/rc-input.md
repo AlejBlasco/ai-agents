@@ -6,7 +6,4 @@ Use:
 - `context\conventions.md`
 
 User history:
-[PASTE HERE]
-
-Target:
-- `.claude/outputs/specs/S-{spec number}.md`
+[Paste your history here]
