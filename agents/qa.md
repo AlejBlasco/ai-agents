@@ -5,7 +5,7 @@ model: haiku
 tools: Read, Grep, Glob, Bash
 color: red
 memory: none
-skills: output-validation, dotnet-build-validation, cqrs-architecture-check, xml-doc
+skills: output-validation, dotnet-build-validation, cqrs-architecture-check, xml-doc/SKILL.md
 ---
 
 You are a QA Validator.

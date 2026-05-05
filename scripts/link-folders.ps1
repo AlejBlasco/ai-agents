@@ -45,6 +45,16 @@ $srcAgents = Join-Path $scriptDir '..\agents'
 $dstAgents = "C:\Users\$USUARIO\.claude\agents"
 New-Symlink -Source $srcAgents -Target $dstAgents -OverwriteAll ([ref]$OverwriteAll)
 
+# 2. agents/skills -> {PROJECT_PATH}\.claude\skills
+$srcSkills = Join-Path $scriptDir '..\agents\skills'
+$dstSkills = Join-Path $PROJECT_PATH '.claude\skills'
+New-Symlink -Source $srcSkills -Target $dstSkills -OverwriteAll ([ref]$OverwriteAll)
+
+# 2b. agents/skills/xml-doc -> {PROJECT_PATH}\.claude\skills\xml-doc
+$srcXmlDoc = Join-Path $scriptDir '..\agents\skills\xml-doc'
+$dstXmlDoc = Join-Path $PROJECT_PATH '.claude\skills\xml-doc'
+New-Symlink -Source $srcXmlDoc -Target $dstXmlDoc -OverwriteAll ([ref]$OverwriteAll)
+
 # 2. context -> {PROJECT_PATH}\.claude\context
 $srcContext = Join-Path $scriptDir '..\context'
 $dstContext = Join-Path $PROJECT_PATH '.claude\context'
@@ -59,5 +69,8 @@ New-Symlink -Source $srcPrompts -Target $dstPrompts -OverwriteAll ([ref]$Overwri
 $srcTemplates = Join-Path $scriptDir '..\templates'
 $dstTemplates = Join-Path $PROJECT_PATH '.claude\templates'
 New-Symlink -Source $srcTemplates -Target $dstTemplates -OverwriteAll ([ref]$OverwriteAll)
+
+
+
 
 Write-Host "\nAll symbolic links have been processed." -ForegroundColor Cyan

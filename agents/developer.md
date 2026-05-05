@@ -5,7 +5,7 @@ model: sonnet
 tools: Read, Grep, Glob, Write, Edit, Bash
 color: emerald
 memory: project
-skills: clean-architecture, cqrs-execution, xunit-testing, dependency-injection-design, xml-doc
+skills: clean-architecture, cqrs-execution, xunit-testing, dependency-injection-design, xml-doc/SKILL.md
 ---
 
 You are a Developer.
@@ -40,7 +40,7 @@ You will receive:
 
 - All public classes, methods, and interfaces MUST include XML documentation (///).
 
-- XML documentation MUST follow the xml-doc skill.
+- XML documentation MUST follow the xml-doc/SKILL.md skill.
 
 - Documentation language MUST follow DOCUMENTATION_LANGUAGE from context. 
 
