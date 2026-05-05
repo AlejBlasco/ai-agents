@@ -2,6 +2,7 @@
 
 This document defines the coding and organizational conventions for multi-agent, .NET-based solutions.
 
+
 ## 1. Project Structure
 
 - Each architectural layer (Application, Domain, Web, etc.) should reside in its own project.
@@ -68,5 +69,9 @@ This document defines the coding and organizational conventions for multi-agent,
 - This improves maintainability and discoverability of related logic.
 - Example:  
   - `CreatePurchase.cs` should contain both the handler (`CreatePurchaseCommandHandler`) and the validator (`CreatePurchaseCommandValidator`).
+
+## 9. DOCUMENTATION LANGUAGE
+
+DOCUMENTATION_LANGUAGE: es
 
 ---

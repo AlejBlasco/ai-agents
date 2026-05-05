@@ -36,3 +36,44 @@ If information is missing, reflect it in DUDAS or split tasks accordingly.
 ---
 
 # OUTPUT FORMAT (STRICT):
+
+```
+# Tasks - [Feature / Module Name]
+
+**Project:** [Project Name]  
+**Feature:** [Clear feature name]  
+**Date:** [YYYY-MM-DD]  
+**Priority:** High / Medium / Low  
+**Status:** Pending
+
+## Objective
+
+[One or two clear sentences describing the goal of this feature.]
+
+## Tasks
+
+### {Task number}. {Task description}
+- [ ] {Task step 1}
+- [ ] {Task step N}
+
+### {Task number N}. {Task description}
+- [ ] {Task step 1}
+- [ ] {Task step N}
+
+## Acceptance Criteria
+- [ ] {Task acceptance criteria}
+
+## Technical Notes
+
+- Recommended technologies: ...
+- Important considerations: ...
+- Dependencies: ...
+---
+
+**Instructions for Developer Agent:**
+
+Execute the tasks in order. Mark completed tasks with `[x]`.  
+After finishing each major section, indicate progress.
+
+```
+

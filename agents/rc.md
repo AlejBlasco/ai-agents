@@ -21,7 +21,9 @@ If technical context is provided, include it under CONTEXT.
 
 If information is missing, add to DUDAS.
 
-# OUTPUT FORMAT (stritc):
+# OUTPUT FORMAT (MANDATORY):
 
 Allways use `templates\spec.md`
+
+Allways generate on `.claude/outputs/specs/`
 

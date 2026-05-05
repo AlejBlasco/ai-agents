@@ -1,30 +1,61 @@
-```
-SPEC_ID: S-XXX
+# Specification Document
 
-FEATURE:
-...
+**Feature / Module:** [Feature Name]  
+**Spec Version:** 1.0  
+**Date:** [YYYY-MM-DD]  
+**Status:** Draft / Final
 
-OBJETIVO:
-...
+## 1. Proposito
 
-CONTEXTO_TECNICO:
+[Una o dos frases para explicar el objetivo]
+
+## 2. CONTEXTO_TECNICO:
+
+[Contexto técnico actual, tecnologías involucradas, restricciones del stack actual, integraciones existentes, etc.]
+
+## 3. ALCANCE
+
+- ...
+- ...
 - ...
 
-ALCANCE:
+## 4. FUERA_DE_ALCANCE
+
+- ...
 - ...
 
-FUERA_DE_ALCANCE:
+## 5. REGLAS_NEGOCIO
+
+- ...
+- ...
 - ...
 
-REGLAS_NEGOCIO:
+## 6. CRITERIOS_ACEPTACION
+
+- [ ] ...
+- [ ] ...
+- [ ] ...
+
+## 7. INVARIANTES
+
+- ...
 - ...
 
-CRITERIOS_ACEPTACION:
-- ...
+## 8. DUDAS
 
-INVARIANTES:
-- ...
+| ID | Pregunta | Estado |
+|----|----------|--------|
+| D1 | ...      | Pending |
+| D2 | ...      | Pending |
 
-DUDAS:
-- ...
-```
+## 9. REFERENCIAS
+
+- Raw input / comentarios de stakeholders: ...
+- Documentos relacionados: ...
+
+---
+
+**Instructions for Requirements Compiler Agent:**
+
+Convierte el input crudo de stakeholders en este formato limpio y estructurado.  
+Sé claro, preciso y elimina ambigüedades cuando sea posible. Marca con "Pending" las dudas importantes.
