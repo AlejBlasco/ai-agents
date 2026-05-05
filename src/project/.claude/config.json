@@ -1,0 +1,57 @@
+{
+  "version": "1.0.0",
+  "project_name": "My Project",
+  "organization": "My Company",
+  
+  "language_settings": {
+    "documentation_language": "es",
+    "code_language": "en",
+    "comments_language": "en"
+  },
+  
+  "agents": {
+    "requirements-compiler": {
+      "output_location": ".claude/outputs/specs/"
+    },
+    
+    "architect": {
+      "output_location": ".claude/outputs/tasks/"
+    },
+    
+    "developer": {
+      "name": "developer",
+      "model": "claude-sonnet-4-20250514",
+      "tools": "Read, Write, Bash, Execute",
+      "documentation_language": "es",
+      "code_language": "en",
+      "output_location": "src/",
+      "description": "Implementa tasks generando código + tests (código en inglés, docs en español)"
+    },
+    
+    "quality-assurance": {
+      "name": "quality-assurance",
+      "model": "claude-opus-4.5",
+      "tools": "Read, Write, Bash",
+      "documentation_language": "es",
+      "code_language": "en",
+      "output_location": ".claude/outputs/qa/",
+      "description": "Valida output vs spec.md (reportes en español)"
+    },
+    
+    "scribe": {
+      "name": "scribe",
+      "model": "claude-sonnet-4-20250514",
+      "tools": "Read, Write",
+      "documentation_language": "es",
+      "code_language": "en",
+      "output_location": "docs/",
+      "description": "Genera documentación técnica y funcional (en español)"
+    }
+  },
+  
+  "templates": {
+    "spec": ".claude/templates/spec.md",
+    "task": ".claude/templates/task.md",
+    "code": ".claude/templates/code-template.ts"
+  }
+}
